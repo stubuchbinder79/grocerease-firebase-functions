@@ -35,7 +35,7 @@ exports.createItem = (req, res) => {
     .then(doc => {
       const resItem = newItem;
       resItem.itemId = doc.id;
-      res.status(200).json({ resProduct });
+      res.status(200).json({ newItem });
     })
     .catch(err => {
       console.error(err);
