@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "grocerease-1aacd",
+  "private_key_id": "37047fbadbc3adf6e48957fbc37192152be2f473",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC2qOVYaSHNOETo\nlV2+ZxSv+YiO+KolA5I/v6haOu2rHwLthVxY9ZTragZ31horNNzyffVWV1mTTCsO\nuHup1Wp/XTPqlbz42JsFw9ZFnsa6Q2mwJV3gJYmnUW9ciWOuL5UhmcdG21jZnOsa\n/jj4PRwRQ1be3bg+c599JnMxZqN0dejIdD59KVY6daRSXZmgrzBNpCFkcdBo+nxb\natWuojMCGQUOIIJJ2z10ZOqXU9hKwqx4Bw1ZzGOJCy8NntcWzePwdz+Auux/IrmC\nJEWXdA/bb/mFwXv312jt/CSqjdFuKbNLf/wezHxYaJta+C7xtT8Q6KY4UN1Q12Bi\no1NZVDLrAgMBAAECggEAE8tNvzz1WsXkQcgd9oo5JbDG6ads2MIAUUQ1vEFyi/66\nVH8FOOa0EqbUuJvNDi2WW/jmY0rn/Bxe9iNr00W7Wr4A6ET9y4G9muxUBgtkwb6Y\nb2w9NhMbTbR3evGwianCYXfGrpkKkdp9Z9lw1wXYSs6fVVt1od7pw6gtB4d14yLN\nDsMVvN2C2k7LIqV4/lAOdn+kBHlT9HjRS//OU64nRvqW2Stxvfu1DysyGAVPpBPF\nuSnzuKOCj8B/cwW8I6IxdIIpd5A6PZeRFq6AnyltTa90dX7fMfyQ8lrauNjLkLMD\ngYaey/uJ6X77EzvcW/UfW2HoD8h9WupElRVPNTcZkQKBgQDZqetGimPEJL7nOJOJ\ncQNadi0MNWM3z6ZsE70nTTjeKmI5TfoZ2jMcHSnddCpHum2q3ikFlhdVvzGoYFI+\na/u/5mGW/96yKGwGWzEeJcSKZiRBgIOUceq1f07ABlGAYLA6H4BoKR8H+jzaOuks\nnknQS2T4YaIzPIzY9h/a1aL1xQKBgQDW1LUSMRYuGWc9qWAZtcwa0GV5Pm+wZYnH\n3qwVWNCtZ0E4L6qXrWM+lCO4UBjsbnhEQLNkT05HarjAuoWB6KoEp2dpbrQ5Q4tG\nknRL71dDdB1uKeOMOSejie92h/4oe5xbz5JGOO159Cm3GL5aNoeAWAhZW4dVP3zw\njtVbcTnA7wKBgQCw4d7qokfU+6+Po3Bx/r8k4mhVRYVts3eg2KGcsKqIEJVl0DJw\nk9t4+1IsPtylEaFRe9yGR6SK8Cbgl/X9+C7LkeK4nRJSYXr351+RCkwf1EWeXVuQ\nZMrB18UdU4Uj+G79rN/ixZgMGZUeG0WmFrQRa1OQbXcsgAZNwiW85mPZqQKBgEIn\nS/7nGLJnZjBJuOsR3WEgbS7xuAj0q4HdotYL/G55Tk8T9o8weFAr4/f8yj/8IJK7\n7cHk3fEF/xByH2yKjdhTCHgh++NqVjgMHz3G3PNLjUiAI67pZrhoYFH6vJwQvGxV\nNfDj1NTqB/J27x7ujblK4n9JvRnWLA4TncXDzwoHAoGAQeCv1e3y0sLOLFSzs6+9\nxwZzWuGwO2Ipnl9oPZYYHDjvtMnaWAnNvMF3q3GKD5/+MSaQ2akd3rSE+gtQFFY9\nebGi5kFkMIAZfSHuSnWetxHHGx2DZLyJOSsieIinBO1kjZhtzohfG7deps45deOR\nUAGc6YfyPeF/GGGTtPmZY7Y=\n-----END PRIVATE KEY-----\n",
+  "client_email": "grocerease-service-account@grocerease-1aacd.iam.gserviceaccount.com",
+  "client_id": "112149887761188556592",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/grocerease-service-account%40grocerease-1aacd.iam.gserviceaccount.com"
+}
