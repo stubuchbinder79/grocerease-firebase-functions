@@ -1,6 +1,9 @@
 const { db, admin } = require("../util/admin");
 // const config  = require ('../util/config');
-
+exports.addItem = (req, res) => {
+  console.log('add item to users inventory');
+  
+}
 exports.getAllItems = (req, res) => {
   admin
     .firestore()
@@ -12,7 +15,8 @@ exports.getAllItems = (req, res) => {
         items.push({
           itemId: doc.id,
           title: doc.data().title,
-          createdAt: doc.data().createdAt
+          createdAt: doc.data().createdAt,
+          userId: req.user.userHandle
         });
       });
       return res.json(items);

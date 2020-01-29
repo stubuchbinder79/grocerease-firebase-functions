@@ -47,7 +47,8 @@ exports.signup = (req, res) => {
         userId,
         handle: newUser.handle,
         email: newUser.email,
-        createdAt: new Date().toISOString()
+        createdAt: new Date().toISOString(),
+        items: []
       };
 
       return db.doc(`/users/${newUser.handle}`).set(newUserCredentials);
@@ -66,9 +67,9 @@ exports.login = (req, res) => {
     password: req.body.password
   };
 
-  // const {valid, errors} = validateLoginData(user);
+  const {valid, errors} = validateLoginData(user);
 
-  // if(Object.keys(errors).length > 0) return res.status(400).json(errors);
+  if(Object.keys(errors).length > 0) return res.status(400).json(errors);
 
   firebase
     .auth()
@@ -90,5 +91,30 @@ exports.login = (req, res) => {
       } else {
         return res.status(500).json({ error: err.code });
       }
+    });
+};
+
+exports.getAuthenticatedUser = (req, res) => {
+  let userData = {};
+  db.doc(`/users/${req.user.handle}`)
+    .get()
+    .then(doc => {
+      if(doc.exists) {
+        userData.credentials = doc.data();
+        return db.collection('items')
+          .where('userHandle', '==', req.user.handle)
+          .get();
+      }
+    })
+    .then(data => {
+      userData.items = [];
+      data.forEach(doc => {
+        userData.items.push(doc.data());
+      });
+      return res.json(userData);
+    })
+    .catch(err => {
+      console.error(err);
+      return res.status(500).json({error: err.code});
     });
 };
