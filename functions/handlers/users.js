@@ -67,9 +67,9 @@ exports.login = (req, res) => {
     password: req.body.password
   };
 
-  const {valid, errors} = validateLoginData(user);
+  const { valid, errors } = validateLoginData(user);
 
-  if(Object.keys(errors).length > 0) return res.status(400).json(errors);
+  if (Object.keys(errors).length > 0) return res.status(400).json(errors);
 
   firebase
     .auth()
@@ -99,22 +99,13 @@ exports.getAuthenticatedUser = (req, res) => {
   db.doc(`/users/${req.user.handle}`)
     .get()
     .then(doc => {
-      if(doc.exists) {
+      if (doc.exists) {
         userData.credentials = doc.data();
-        return db.collection('items')
-          .where('userHandle', '==', req.user.handle)
-          .get();
+        return res.json(userData)
       }
-    })
-    .then(data => {
-      userData.items = [];
-      data.forEach(doc => {
-        userData.items.push(doc.data());
-      });
-      return res.json(userData);
     })
     .catch(err => {
       console.error(err);
-      return res.status(500).json({error: err.code});
+      return res.status(500).json({ error: err.code });
     });
 };
