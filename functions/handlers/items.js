@@ -57,6 +57,8 @@ exports.activateItem = (req, res) => {
     .get()
     .then((doc) => {
       itemData = doc.data();
+      itemData.itemId = doc.id;
+      
       itemData.isActive = true;
       itemDoc.update({ isActive: true })
         .then(() => {
