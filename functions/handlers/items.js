@@ -16,8 +16,7 @@ exports.getAllItems = (req, res) => {
           itemId: doc.id,
           title: doc.data().title,
           isActive: doc.data().isActive,
-          createdAt: doc.data().createdAt,
-          userId: req.user.userHandle
+          createdAt: doc.data().createdAt
         });
       });
       return res.json(items);
@@ -32,8 +31,7 @@ exports.createItem = (req, res) => {
   const newItem = {
     title: req.body.title,
     isActive: true,
-    createdAt: new Date().toISOString(),
-    userHandle: req.user.handle
+    createdAt: new Date().toISOString()
   };
 
   db.collection("items")
@@ -58,7 +56,6 @@ exports.activateItem = (req, res) => {
     .then((doc) => {
       itemData = doc.data();
       itemData.itemId = doc.id;
-      
       itemData.isActive = true;
       itemDoc.update({ isActive: true })
         .then(() => {
